@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+}
+
+
+.main{
+    background-color: #e4f9f5;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.main .contactcard{
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 8px rgb(109, 106, 106);
+    color: #66bfbf;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:50px 0;
+}
+table{
+    border-collapse: collapse;
+    color: black;
+    box-shadow: 2px 2px 8px rgb(44, 41, 41);
+    margin-top: 20px;
+}
+
+table td{
+    border: 1px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+tr:nth-child(1){
+    background-color:#00a400;
+    text-transform: uppercase;
+    color: aliceblue;
+    
+
+}

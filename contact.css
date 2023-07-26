@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+}
+
+
+
+.main{
+  background-color: #e4f9f5;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.formbody{
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 8px white;
+    color: #66bfbf;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.formbody h1{
+    margin-bottom: 30px;
+}
+
+.formbody form .forminput{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formbody form .forminput .inputbox{
+    display: flex;
+    flex-direction: column;
+    gap:1px
+}
+
+.formbody form .forminput .inputbox input[type=text]{
+    border: 0.5px solid   #4c726b;;
+    outline: 0;
+    border-radius: 10px;
+    box-shadow: 3px 2px 2px white;
+    padding: 10px;
+}
+
+span{
+    
+    color: red;
+    font-size: xx-small;
+
+
+}
+
+form textarea{
+    border: 0.5px solid   #4c726b;;
+    outline: 0;
+    border-radius: 10px;
+    box-shadow: 3px 2px 2px white;
+    padding: 10px;
+}
+
+.formbody form .forminput input[type=submit]{
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    color: #fafafa;
+    font-size: 20px;
+    background-image: linear-gradient(to bottom, #12108e, #061e78);
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 0;
+}
+
+.formbody form .forminput .outlabel{
+    margin-bottom: 0;
+}
+

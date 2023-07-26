@@ -1,0 +1,161 @@
+ *{
+    margin: 0;
+    
+ }
+ 
+ 
+ 
+ .top-conatiner{  
+    text-align: center;
+    background-color: #e4f9f5;
+    position: relative;
+    padding-top: 100px;
+    overflow-y: hidden;
+
+ }
+ .top-cloud{
+    position: absolute;
+    top: 30px;
+    right: 300px;
+    
+ }
+ .top-conatiner .signin{
+    position: absolute;
+    top:30px;
+    right: 50px;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    color: #fafafa;
+    font-size: 20px;
+    background-color: #1877f2;;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 0; 
+ }
+ .top-conatiner .signin a{
+   all: unset;
+ }
+ div.text h1{
+    font-family: "Sacramento", cursive;
+    font-size: 60px;
+    font-weight: 900;
+    
+
+ }
+ div.text{
+    text-align: center;
+    margin-top: 40px;
+    color: #66bfbf;
+    margin-bottom: 65px;
+ }
+
+ div.text h3,.middle-container .skills h3,.middle-container .contact h3{
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    color: #66bfbf;
+    margin-bottom: 10px;
+ }
+
+ .middlecloud{
+    position: absolute;
+    left: 250px;
+    bottom: 300px;
+ }
+
+ .middle-container{
+    text-align: center;
+    padding: 70px;
+    
+ }
+
+ .middle-container .profile img  {
+    width: 200px;
+    height: 200px;
+ }
+
+
+ .middle-container .profile h1,.middle-container .skills h1,.middle-container .contact h1{
+    color: #66bfbf;
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    font-weight: normal;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    
+
+ }
+
+
+ .middle-container .profile p,.middle-container .skills p,.middle-container .contact p{
+    width:350px;
+    margin: 0 auto;
+    text-align: justify;
+    font-family: "Merriweather", serif;
+    line-height: 2;
+    color: #40514e;
+    
+ }
+
+
+ hr{
+     
+    border: dotted #eaf6f6 10px;
+    border-bottom: none;
+    width: 4%;
+    margin: 80px auto;
+ }
+
+
+ .skill1,.skill2{
+    width: 350px;
+    margin: 30px auto;
+    text-align: justify;
+    margin-bottom: 5px;
+ }
+
+
+
+ .middle-container .contact h3{
+    font-size: 20px;
+    font-weight: bolder;
+ }
+
+ .middle-container .contact p{
+    
+       width: 40%;
+       margin: 50px auto;
+       text-align: center;
+ }
+ .middle-container .contact{
+    margin-top: 100px;
+ }
+
+ .btn{
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+    display: block;
+    margin: 20px auto 100px;
+    width: 150px;
+ }
+.middle-container .contact .btn:hover{
+    background-image: linear-gradient(to bottom, #265a47, #0bdd74);
+ }
+
+ .footer{
+    background-color: #66bfbf;
+    font-family: "Merriweather", serif;
+    text-align: center;
+    padding: 50px;
+ }
+ .footer p{
+    font-size: 18px;
+    color: #eaf6f6;
+    margin-top: 30px;
+    
+ }
