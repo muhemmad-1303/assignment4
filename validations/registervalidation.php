@@ -99,13 +99,13 @@
      $con->query($sql);
      $_SESSION['form_data']="";
      $_SESSION['form_error']="";
-     header("location:loginpage.php");
+     header("location:../page/loginpage.php");
   }
   else{
   
    //   header("location:contact.php?errorfname=".$errorfname."&errorlname=".$errorlname."&erroremail=".$erroremail."&errornumber=".$errornumber."&fname=".$fname."&email=".$email."&number=".$number."&message=".$message);
    
      $_SESSION['conditon']=0;
-     header("location:register.php?");
+     header("location:../page/register.php");
   }
 ?>

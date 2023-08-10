@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
@@ -16,18 +16,18 @@
 <body>
     <div class="main">
         <div class="top-conatiner">
-            <div class="signin"><a href="loginpage.php">sign in</a></div>
-            <img src="cloud.png" alt="cloud" class="top-cloud">
+            <div class="signin"><a href="page/loginpage.php">sign in</a></div>
+            <img src="images/cloud.png" alt="cloud" class="top-cloud">
             <div class="text">
                 <h1>I'm Muhammed</h1>
                 <h3>a programmer</h3>
             </div>
-            <img src="cloud.png" alt="cloud" class="middlecloud">
-            <img src="mountain.png" alt="mountain" class="mountain">
+            <img src="images/cloud.png" alt="cloud" class="middlecloud">
+            <img src="images/mountain.png" alt="mountain" class="mountain">
         </div>
         <div class="middle-container">
             <div class="profile">
-            <img src="MUHAMMED.png" alt="">
+            <img src="images/MUHAMMED.png" alt="">
             <h1>Hello.</h1>
             <p>I am an  Web Developer. I'm cuurently working in Mozilor Technologies Pvt.Ltd as Softaware Developer Trainee. I ❤️ coffee and brew my own
                 beers.</p>
@@ -52,7 +52,7 @@
                 <h1>Get In Touch</h1>
                 <h3>If you love hot wings as much as I do.</h3>
                 <p>Love hot wings as much as I do? Let's talk about how awesome they are! We can code while we eat hot wings!</p>
-                <a href="contact.php" class="btn">CONTACT ME</a>
+                <a href="page/contact.php" class="btn">CONTACT ME</a>
             </div>
         </div>
         <div class="footer">

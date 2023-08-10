@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="../styles/contact.css">
 </head>
 <body>
     <?php
@@ -19,7 +19,7 @@
     <div class="main">
     <div class="formbody">
     <h1>CONTACT ME</h1>
-    <form action="contactvalidation.php" method="post">
+    <form action="../validations/contactvalidation.php" method="post">
     <div class="forminput">
     <div class="inputbox">   
     <label>First Name :</label>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="../styles/register.css">
 </head>
 <body>
     <?php
@@ -22,7 +22,7 @@
     <div class="main">
         <div class="registercard">
             <h1>Create new account</h1>
-            <form action="registervalidation.php" method="post">
+            <form action="../validations/registervalidation.php" method="post">
             <div class="registerbody">
                 <div class="inputbox">
                     <label>User name:</label>

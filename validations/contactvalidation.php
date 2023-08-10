@@ -60,6 +60,7 @@
  session_start();
  $_SESSION['form_data']=$form_data;
  $_SESSION['form_error']=$error;
+ $_SESSION['start'] = true;
  
 
 
@@ -67,12 +68,12 @@
   if(empty($error)){
      $sql="INSERT INTO contactinfo(fname, lname, email, number,message) VALUES ('{$form_data['fname']}','{$form_data['lname']}','{$form_data['email']}','{$form_data['number']}','{$form_data['message']}')";
      $con->query($sql);
-     header("location:success.php");
+     header("location:../page/success.php");
   }
   else{
   
    //   header("location:contact.php?errorfname=".$errorfname."&errorlname=".$errorlname."&erroremail=".$erroremail."&errornumber=".$errornumber."&fname=".$fname."&email=".$email."&number=".$number."&message=".$message);
-    header("Location:contact.php");
+    header("Location:../page/contact.php");
     
    
   }

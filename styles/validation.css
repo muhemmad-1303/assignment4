@@ -40,3 +40,15 @@
         
         
     }
+
+    .main .nav{
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+
+    .main .nav img{
+        width: 50px;
+    }
+
+    

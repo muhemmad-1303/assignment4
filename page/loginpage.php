@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../styles/login.css">
 </head>
 <body>
 <?php
@@ -19,7 +19,7 @@
       ?>
        <div class="main">
         <div class="logincard">
-            <form action="loginvalidation.php" method="post">
+            <form action="../validations/loginvalidation.php" method="post">
             <div class="inputbox">
             <label>User Name:</label>
             <input type="text" name="username" value="<?=$form_data['username'] ?? '' ?>">

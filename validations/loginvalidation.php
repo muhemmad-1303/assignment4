@@ -59,17 +59,17 @@ if(empty($form_data['username'])){
 
   if(password_verify($form_data['password'],$row['password'])){
     
-    header("location:contacmeinfo.php");
+    header("location:../page/contacmeinfo.php");
   }
   else{
        $error['errorpassword']="incorrect password";
        $_SESSION['form_error']=$error;
-       header("location:loginpage.php");
+       header("location:../page/loginpage.php");
     
   }
   }
   else{
-    header("location:loginpage.php");
+    header("location:../page/loginpage.php");
   }
 
 
