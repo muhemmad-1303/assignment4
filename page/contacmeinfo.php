@@ -8,17 +8,10 @@
 </head>
 <body>
 <?php
- $host='localhost';
- $user='root';
- $password='';
- $dbname='users';
- $con=new mysqli($host,$user,$password,$dbname);
- if($con->connect_error){
-   die("connection error");
- }
- $sql="SELECT *FROM contactinfo;";
-   $result=$con->query($sql);
-
+ include "../database/database.php";
+ $statement=$pdo->prepare("SELECT *FROM contactinfo;");
+ $statement->execute();
+ $result=$statement->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <div class="main">
 <div class="contactcard">
@@ -32,7 +25,7 @@
     <td>message</td>
    </tr>
    <?php
-     while($row=$result->fetch_assoc()){
+     foreach($result as $row){
    ?>
       <tr>
       <td><?=$row["fname"] ?></td>

@@ -1,12 +1,5 @@
 <?php
-$host='localhost';
-$user='root';
-$password='';
-$dbname='users';
-$con=new mysqli($host,$user,$password,$dbname);
-if($con->connect_error){
-  die("connection error");
-}
+include "database/database.php";
 
 if($_SERVER["REQUEST_METHOD"]="POST"){
    foreach($_POST as $key=>$value){
@@ -52,10 +45,11 @@ if(empty($form_data['username'])){
   
   
   if(empty($error)){
-  
-  $sql="select password from userinfo where username ='{$form_data['username']}'";
-  $result=$con->query($sql);
-  $row=$result->fetch_assoc();
+
+  $statement=$pdo->prepare("select password from userinfo where username ='{$form_data['username']}'");
+  $statement->execute();
+  $result=$statement->fetchAll(PDO::FETCH_ASSOC);
+  $row=$result;
 
   if(password_verify($form_data['password'],$row['password'])){
     

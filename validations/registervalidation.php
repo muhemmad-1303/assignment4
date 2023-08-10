@@ -1,12 +1,5 @@
 <?php
- $host='localhost';
- $user='root';
- $password='';
- $dbname='users';
- $con=new mysqli($host,$user,$password,$dbname);
- if($con->connect_error){
-   die("connection error");
- }
+include "../database/database.php";
 
  if($_SERVER["REQUEST_METHOD"]="POST"){
     foreach($_POST as $key=>$value){
@@ -95,8 +88,8 @@
 
   if(empty($error)){
      $hasshedpassword=password_hash($form_data['password'],PASSWORD_BCRYPT);
-     $sql="INSERT INTO userinfo(username, email, number, gender, password) VALUES ('{$form_data['username']}','{$form_data['email']}','{$form_data['number']}','{$form_data['gender']}','$hasshedpassword')";
-     $con->query($sql);
+     $statement=$pdo->prepare("INSERT INTO userinfo(username, email, number, gender, password) VALUES ('{$form_data['username']}','{$form_data['email']}','{$form_data['number']}','{$form_data['gender']}','$hasshedpassword')");
+     $statement->execute();
      $_SESSION['form_data']="";
      $_SESSION['form_error']="";
      header("location:../page/loginpage.php");

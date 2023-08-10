@@ -1,11 +1,5 @@
 <?php
- $host='localhost';
- $user='root';
- $password='';
- $dbname='users';
- $con=new mysqli($host,$user,$password,$dbname);
- if($con->connect_error){
-   die("connection error");}
+include "../database/database.php";
    
  if($_SERVER["REQUEST_METHOD"]="POST"){
     foreach($_POST as $key=>$value){
@@ -66,8 +60,8 @@
 
 
   if(empty($error)){
-     $sql="INSERT INTO contactinfo(fname, lname, email, number,message) VALUES ('{$form_data['fname']}','{$form_data['lname']}','{$form_data['email']}','{$form_data['number']}','{$form_data['message']}')";
-     $con->query($sql);
+     $statement=$pdo->prepare("INSERT INTO contactinfo(fname, lname, email, number,message) VALUES ('{$form_data['fname']}','{$form_data['lname']}','{$form_data['email']}','{$form_data['number']}','{$form_data['message']}')");
+     $statement->execute();
      header("location:../page/success.php");
   }
   else{
