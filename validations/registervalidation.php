@@ -22,9 +22,10 @@ include "../database/database.php";
     $form_data['username']="";
  }
  else{
-     $sql="select * from userinfo where username ='{$form_data['username']}'";
-     $result=$con->query($sql);
-     if($result->num_rows > 0){
+     $statement=$pdo->prepare("select * from userinfo where username ='{$form_data['username']}'");
+     $statement->execute();
+     $res=$statement->fetchAll(PDO::FETCH_ASSOC);
+     if(count($res)> 0){
       $error['errorusername']='username has taken';
      }
     
@@ -38,9 +39,12 @@ include "../database/database.php";
     $form_data['email']="";
  }
  else{
-   $sql="select * from userinfo where email ='{$form_data['email']}'";
-   $result=$con->query($sql);
-   if($result->num_rows > 0){
+  $statement=$pdo->prepare("select * from userinfo where email ='{$form_data['email']}'");
+  $statement->execute();
+  $res=$statement->fetchAll(PDO::FETCH_ASSOC);
+  
+  
+   if(count($res) > 0){
     $error["erroremail"]="email already exist";
    }
   
@@ -49,15 +53,16 @@ include "../database/database.php";
    $error["errornumber"]="field should contain a value";
    
  }
- else if(!preg_match("/[0-9]/",$form_data['number'])){
+ else if(!preg_match("/^[0-9]+$/",$form_data['number'])){
    $error["errornumber"]="number only allowed";
    $form_data['number']="";
 
  }
  else{
-   $sql="select * from userinfo where number ='{$form_data['number']}'";
-   $result=$con->query($sql);
-   if($result->num_rows > 0){
+  $statement=$pdo->prepare("select * from userinfo where number ='{$form_data['number']}'");
+  $statement->execute();
+  $res=$statement->fetchAll(PDO::FETCH_ASSOC);
+   if(count($res) > 0){
     $error['errornumber']='number already exist';
    }
  }

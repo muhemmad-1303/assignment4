@@ -1,5 +1,5 @@
 <?php
-include "database/database.php";
+include "../database/database.php";
 
 if($_SERVER["REQUEST_METHOD"]="POST"){
    foreach($_POST as $key=>$value){
@@ -22,9 +22,11 @@ if(empty($form_data['username'])){
     $form_data['username']="";
  }
  else{
-     $sql="select * from userinfo where username ='{$form_data['username']}'";
-     $result=$con->query($sql);
-     if($result->num_rows == 0){
+     $statement=$pdo->prepare("select * from userinfo where username ='{$form_data['username']}'");
+     $statement->execute();
+     $result=$statement->fetchAll(PDO::FETCH_ASSOC);
+     
+     if(count($result)== 0){
       $error['errorusername']='incorrect username';
      }   
  }
@@ -46,16 +48,16 @@ if(empty($form_data['username'])){
   
   if(empty($error)){
 
-  $statement=$pdo->prepare("select password from userinfo where username ='{$form_data['username']}'");
-  $statement->execute();
-  $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-  $row=$result;
+  $state=$pdo->prepare("select password from userinfo where username ='{$form_data['username']}'");
+  $state->execute();
+  $res=$state->fetchAll(PDO::FETCH_ASSOC);
 
-  if(password_verify($form_data['password'],$row['password'])){
+  if(password_verify($form_data['password'],$res['password'])){
     
     header("location:../page/contacmeinfo.php");
   }
   else{
+       var_dump($res);
        $error['errorpassword']="incorrect password";
        $_SESSION['form_error']=$error;
        header("location:../page/loginpage.php");
@@ -63,6 +65,7 @@ if(empty($form_data['username'])){
   }
   }
   else{
+    
     header("location:../page/loginpage.php");
   }
 
