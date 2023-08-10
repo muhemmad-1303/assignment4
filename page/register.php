@@ -20,6 +20,7 @@
       }
       ?>
     <div class="main">
+        <?php include "nav.php"  ?>
         <div class="registercard">
             <h1>Create new account</h1>
             <form action="../validations/registervalidation.php" method="post">

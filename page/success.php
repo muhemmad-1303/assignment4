@@ -23,9 +23,7 @@
         
       ?>
       <div class="main">
-        <div class="nav">
-          <div class="home"><a href="../index.php"><img src="../images/Home.png" alt=""></a></div>
-        </div>
+        <?php include "nav.php"?>
         <div class="successcard">
             <h1>Hooray..</h1>
             <p>You are connected with me</p>

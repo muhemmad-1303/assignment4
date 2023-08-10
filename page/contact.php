@@ -17,6 +17,7 @@
     ?>
     
     <div class="main">
+    <?php include "nav.php"?>
     <div class="formbody">
     <h1>CONTACT ME</h1>
     <form action="../validations/contactvalidation.php" method="post">

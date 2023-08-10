@@ -18,6 +18,7 @@
      
       ?>
        <div class="main">
+       <?php include "nav.php"?>
         <div class="logincard">
             <form action="../validations/loginvalidation.php" method="post">
             <div class="inputbox">
