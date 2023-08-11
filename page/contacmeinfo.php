@@ -14,6 +14,7 @@
  $result=$statement->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <div class="main">
+  <?php include "nav.php" ?>
 <div class="contactcard">
 <h1>Contact Information</h1>
 <table width="800" style="border:1px solid black;">

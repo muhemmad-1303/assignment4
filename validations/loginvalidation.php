@@ -52,7 +52,7 @@ if(empty($form_data['username'])){
   $state->execute();
   $res=$state->fetchAll(PDO::FETCH_ASSOC);
 
-  if(password_verify($form_data['password'],$res['password'])){
+  if(password_verify($form_data['password'],$res[0]['password'])){
     
     header("location:../page/contacmeinfo.php");
   }
